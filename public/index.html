@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo de Calidad y Deriva - Ruta Express</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 0 24px;
+            color: #1f2328;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #0969da;
+            border-bottom: 2px solid #d0d7de;
+            padding-bottom: 12px;
+        }
+        h2 {
+            color: #1f2328;
+            margin-top: 28px;
+        }
+        .card {
+            background-color: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 14px;
+            margin-bottom: 24px;
+        }
+        th, td {
+            padding: 10px 14px;
+            border: 1px solid #d0d7de;
+            text-align: left;
+        }
+        th {
+            background-color: #eaeef2;
+            font-weight: 600;
+        }
+        .total-row {
+            background-color: #f6f8fa;
+            font-weight: bold;
+        }
+        code {
+            background-color: #eff1f3;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+            font-size: 0.9em;
+        }
+        .cta-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #1f883d;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.05em;
+            transition: background-color 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #1a7f37;
+        }
+        a {
+            color: #0969da;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Monitoreo de Calidad y Deriva de Datos - Ruta Express</h1>
+        <p>Pipeline automatizado de monitoreo continuo de datos con Evidently AI y GitHub Actions.</p>
+    </header>
+
+    <main>
+        
+    <section class="card">
+        <h2>Metadatos de Ejecución (CI/CD)</h2>
+        <ul>
+            <li><strong>Commit (GITHUB_SHA):</strong> <code>local-run</code></li><li><strong>Fecha de ejecución:</strong> 2026-11-07 21:28:52 (UTC)</li><li><strong>Reporte de Deriva:</strong> <a href="comparacion.html">Ver reporte Evidently (DataDriftPreset)</a></li>
+        </ul>
+    </section>
+    
+        
+    <section>
+        <h2>Resumen de Grupos y Lotes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Grupo</th>
+                    <th>Nombre de Lote</th>
+                    <th>Fecha de Lote</th>
+                    <th>Cantidad de Filas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Referencia</td><td><code>base</code></td><td>2026-10-05</td><td>120</td></tr><tr><td>Actual</td><td><code>control</code></td><td>2026-10-12</td><td>120</td></tr>
+            </tbody>
+        </table>
+    </section>
+    
+        
+    <section>
+        <h2>Conteo de Pedidos por Zona</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Zona</th>
+                    <th>Pedidos en Referencia</th>
+                    <th>Pedidos en Actual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Centro</td><td>115</td><td>118</td></tr><tr><td>Periferia</td><td>5</td><td>2</td></tr>
+                <tr class="total-row">
+                    <td><strong>Total</strong></td>
+                    <td><strong>120</strong></td>
+                    <td><strong>120</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    
+        
+    <section>
+        <h2>Variables Numéricas Analizadas</h2>
+        <p>Se ejecutó el preset <code>DataDriftPreset</code> sobre las siguientes variables continuas:</p>
+        <ul>
+            <li><code>distancia_km</code>: Distancia del trayecto en kilómetros.</li><li><code>entrega_min</code>: Tiempo de entrega del pedido en minutos.</li><li><code>importe_bs</code>: Importe total de la compra en Bolivianos (Bs).</li>
+        </ul>
+        <p>Variables contextuales y de rastreo: <code>zona</code> (contexto), <code>pedido_id</code>, <code>fecha_lote</code>, <code>lote</code>.</p>
+    </section>
+    
+
+        <div class="cta-container">
+            <a class="btn" href="comparacion.html">Explorar Informe Interactivo de Data Drift &rarr;</a>
+        </div>
+    </main>
+
+    <footer>
+        <hr style="border: 0; border-top: 1px solid #d0d7de; margin-top: 40px;">
+        <p><small>&copy; Ruta Express - Monitoreo CI/CD continuo de deriva de datos.</small></p>
+    </footer>
+</body>
+</html>
