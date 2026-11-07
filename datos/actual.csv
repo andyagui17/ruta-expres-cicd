@@ -1,5 +1,5 @@
 pedido_id,fecha_lote,lote,zona,distancia_km,entrega_min,importe_bs
-RE-0241,2026-10-19,expansion,periferia,8.13,43.9,57.8
+RE-0241,2026-10-19,expansion,periferia,8.13,-43.9,57.8
 RE-0242,2026-10-19,expansion,centro,1.63,14.2,69.51
 RE-0243,2026-10-19,expansion,periferia,6.69,51.2,58.44
 RE-0244,2026-10-19,expansion,periferia,7.78,32.1,73.94
